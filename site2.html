@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özür</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://i.imgur.com/bF6pJ2A.png') no-repeat center center fixed; /* güneş arka plan */
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #000;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.5em;
+            margin: 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #yes {
+            background-color: #FFD700;
+            color: #fff;
+            box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.6);
+        }
+
+        #yes:hover {
+            background-color: #FFC107;
+            transform: translateY(-5px);
+        }
+
+        #no {
+            position: absolute;
+            background-color: #FF6F61;
+            color: #fff;
+            box-shadow: 0px 4px 15px rgba(255, 111, 97, 0.6);
+        }
+
+        #no:hover {
+            transform: rotate(10deg);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #000;
+            font-weight: bold;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Beni bağışlar mısın?</h1>
+    <div class="buttons">
+        <button id="yes">Evet</button>
+        <button id="no">Hayır</button>
+    </div>
+
+    <footer>😊 ☀️ <span style="font-size: 1.3em;">Özür dilerim, bulutlar güneşi saklıyor gibi hissettirdim. Ama bu güneşi yeniden parlatmak istiyorum.</span> 😊</footer>
+
+    <script>
+        const noButton = document.getElementById("no");
+
+        noButton.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        });
+
+        document.getElementById("yes").addEventListener("click", () => {
+            alert("Gönlünü nasıl alabileceğimi şaşırdım teşşekkür ederim belki bu biraz da olsa işe yarar");
+        });
+    </script>
+</body>
+</html>
